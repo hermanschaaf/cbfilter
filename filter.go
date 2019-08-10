@@ -188,3 +188,8 @@ func (f *Filter) incrementSlot(slot uint32, incr int32) {
 func (f *Filter) getSlot(slot uint32) uint32 {
 	return f.getBits(slot*f.B, f.B)
 }
+
+// GetSlot returns the slot value.
+func (f *Filter) GetSlot(slot uint32) uint32 {
+	return f.getSlot(slot)
+}
